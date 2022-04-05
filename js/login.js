@@ -4,10 +4,8 @@ const pwInput = document.querySelector(".input-pw");
 const loginBtn = document.querySelector(".login-button");
 
 loginInputs.addEventListener("keyup", () => {
-  loginBtn.disabled =
-    idInput.value.length >= 1 && pwInput.value.length >= 1 ? false : true;
-});
+  const isIncludeAt = idInput.value.includes("@");
+  const isPwMoreThanFive = pwInput.value.length >= 5;
 
-loginBtn.addEventListener("click", () => {
-  window.location.href = "./main.html";
+  loginBtn.disabled = isIncludeAt && isPwMoreThanFive ? false : true;
 });
