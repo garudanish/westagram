@@ -32,8 +32,8 @@
           <i class="fa-solid fa-magnifying-glass"></i>
           <input class="gnb-search" type="text" placeholder="검색" />
 
-          <div class="gnb-search-result">
-            <ul class="gnb-search-result-list"></ul>
+          <div class="gnb-search-result modal">
+            <ul class="gnb-search-result-list modal-list"></ul>
           </div>
         </div>
 
@@ -48,11 +48,44 @@
             type="button"
             aria-label="Open your activities modal"
           ></button>
-          <button
-            class="gnb-button button-profile"
-            type="button"
-            aria-label="Open profile settings modal"
-          ></button>
+          <div class="gnb-profile-setting">
+            <button
+              class="gnb-button button-profile"
+              type="button"
+              aria-label="Open profile settings modal"
+            ></button>
+            <div class="gnb-profile-setting-modal modal">
+              <ul class="gnb-profile-setting-list modal-list">
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    <span>프로필</span>
+                  </a>
+                </li>
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <span>저장됨</span>
+                  </a>
+                </li>
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>설정</span>
+                  </a>
+                </li>
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <span>계정전환</span>
+                  </a>
+                </li>
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#"> 로그아웃 </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>

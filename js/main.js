@@ -8,6 +8,10 @@ const gnbSearchResult = document.body.querySelector(".gnb-search-result");
 const gnbSearchResultList = document.body.querySelector(
   ".gnb-search-result-list"
 );
+const gnbProfileSettingButton = document.body.querySelector(".button-profile");
+const gnbProfileSetting = document.body.querySelector(
+  ".gnb-profile-setting-modal"
+);
 
 // 피드 버튼들 동작 시 클래스 fa-solid 바꾸기 등
 
@@ -151,7 +155,7 @@ const paintMatchedArray = () => {
 
   matchedArray.map((el) => {
     const matchedLi = document.createElement("li");
-    matchedLi.className = "gnb-search-result-item";
+    matchedLi.className = "gnb-search-result-item modal-item";
 
     const matchedLiLeft = document.createElement("div");
     matchedLiLeft.className = "gnb-search-result-item-left";
@@ -193,6 +197,14 @@ gnbSearchBar.addEventListener("focus", () => {
 
 gnbSearchBar.addEventListener("blur", () => {
   gnbSearchResult.classList.remove("is-active");
+});
+
+gnbProfileSettingButton.addEventListener("click", () => {
+  gnbProfileSetting.classList.add("is-active");
+});
+
+gnbProfileSettingButton.addEventListener("blur", () => {
+  gnbProfileSetting.classList.remove("is-active");
 });
 
 gnbSearchBar.addEventListener("keyup", (e) => {
